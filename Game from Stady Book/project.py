@@ -41,6 +41,19 @@ try:
 				print('You did not enter the valid number. Pleas try again.')
 				userResult = input('\nPleas, enter number of questions how do you want in the game (1 to 10): ')
 
-except:
-	pass
+		if game == 1:
+			mg.no0fQuestions = num
+			printInstructions(mathInsructions)
+			score = score + mg.generateQuestions()
+		else:
+			bg.no0fQuestions = num
+			printInstructions(binaryInstructions)
+			score = score +bg.generateQuestions()
+		print('\nYour current score is %d.' %(score))
+		userChoice = input('\nPress Enter to continue or "-1" to end: ')
+		updateUserScore(newUser, userName, str(score))
+
+except Exception as e:
+	print('An unknown error occurred. Program will exit.')
+	print('Error: ', e)
 
