@@ -20,3 +20,8 @@ def sort_dictionary():
 	print('Товары отсортированы.')
 
 sort_dictionary()
+
+#simple dictionery sort
+for key, value in user_0.items():
+	print("\nKey: " + key)
+	print("\nValue: " + value)
